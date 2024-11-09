@@ -15,7 +15,7 @@ export default function Home() {
             <li>Unleash Your Potential</li>
           </ul>
         </p>
-        <Link href="/" passHref>
+        <Link href="/gallery" passHref>
           <Button>Explore More</Button>
         </Link>
       </section>
