@@ -44,8 +44,8 @@ const CoursePage = async ({ params: { slug } }: Props) => {
   const nextChapter = unit.chapters[chapterIndex + 1];
   const prevChapter = unit.chapters[chapterIndex - 1];
   return (
-    <div>
-      <CourseSideBar course={course} currentChapterId={chapter.id} />;
+    <div className="absolute mx-4">
+      <CourseSideBar course={course} currentChapterId={chapter.id} />
       <div>
         <div className="ml-[400px] px-8">
           <div className="flex">
@@ -57,7 +57,6 @@ const CoursePage = async ({ params: { slug } }: Props) => {
             />
             <QuizCards chapter={chapter} />
           </div>
-
           <div className="flex-[1] h-[1px] mt-4 text-gray-500 bg-gray-500" />
           <div className="flex pb-8">
             {prevChapter && (
@@ -78,7 +77,6 @@ const CoursePage = async ({ params: { slug } }: Props) => {
                 </div>
               </Link>
             )}
-
             {nextChapter && (
               <Link
                 href={`/course/${course.id}/${unitIndex}/${chapterIndex + 1}`}
